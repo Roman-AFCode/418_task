@@ -1,0 +1,27 @@
+.header {
+  border-bottom: 1px solid rgb(203, 203, 203);
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  button {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid rgb(216, 211, 211);
+    padding: 0.5em 0.5em; // Заменил запятую на точку для padding
+    margin-left: 10px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.25s;
+
+    &:hover {
+      border-color: rgb(134, 134, 134);
+    }
+  }
+
+}
+
+h3 {
+  padding-left: 30px;
+}

@@ -1,0 +1,37 @@
+.footer {
+  border-top: 1px solid rgb(203, 203, 203);
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding-left: 10px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    padding: 0;
+
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-right: 5px;
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      border: 1px solid rgb(216, 211, 211);
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(241, 225, 137);
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}

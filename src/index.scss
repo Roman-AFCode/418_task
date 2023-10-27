@@ -1,0 +1,17 @@
+@import './App.module';
+@import './components/Body/Body.module';
+@import './components/Footer/Footer.module';
+@import './components/Header/Header.module';
+@import './components/MainPage/MainPage.module';
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
