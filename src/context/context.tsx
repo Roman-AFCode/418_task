@@ -68,12 +68,16 @@ export const AppContext: FC<IProps> = ({ children }) => {
   }, [visible]);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
+
     const fetchData = async () => {
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/users');
-        if (!response.ok) {
-          throw new Error('Bad network response');
-        }
+        const response = await fetch(
+          'https://jsonplaceholder.typicode.com/users',
+          {
+            signal: signal,
+          });
         const result = await response.json();
         setList(result);
       } catch (error) {
@@ -82,6 +86,9 @@ export const AppContext: FC<IProps> = ({ children }) => {
     };
 
     fetchData();
+    return () => {
+      controller.abort();
+    }
   }, []);
 
   const onTransitionEnd = (e: React.TransitionEvent<HTMLDivElement>) => {
